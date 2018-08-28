@@ -96,4 +96,4 @@
   * [awesome-cli-apps](https://github.com/agarrharr/awesome-cli-apps)
   * [awesome-command-line-apps](https://github.com/herrbischoff/awesome-command-line-apps)
   * [堪称神器的命令行](https://www.zhihu.com/question/59227720)
-  
+  * [the-art-of-command-line](https://github.com/jlevy/the-art-of-command-line)
