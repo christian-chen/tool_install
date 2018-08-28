@@ -16,7 +16,7 @@
 ```
 3. zsh [theme](https://github.com/robbyrussell/oh-my-zsh/wiki/themes)
 ```
-ZSH_THEME="ys"
+  ZSH_THEME="ys"
 ```
 4. zsh plugins install, more [awesome zsh plugins](https://github.com/unixorn/awesome-zsh-plugins)
   * [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)<br>
@@ -29,12 +29,12 @@ ZSH_THEME="ys"
       ```
 5. ~.zshrc config
   ```
-  plugins=(
-    git
-    fasd
-    syntax-highlighting
-    zsh-autosuggestions
-)
+    plugins=(
+      git
+      fasd
+      syntax-highlighting
+      zsh-autosuggestions
+    )
   ```
 ### [fasd](https://github.com/clvv/fasd) install
   a tool keeps track of files and directories you have accessed
@@ -48,40 +48,49 @@ ZSH_THEME="ys"
   A simple, fast and user-friendly alternative to 'find'
   Download the latest .deb package from the [release page](https://github.com/sharkdp/fd/releases) and install it via
   ```
-  sudo dpkg -i fd_7.0.0_amd64.deb
+    sudo dpkg -i fd_7.0.0_amd64.deb
   ```
 ### [fzf](https://github.com/junegunn/fzf) install
   fuzzy finder , awesome tool !
   install via git
   ```
-  git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-  ~/.fzf/install
+    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+    ~/.fzf/install
   ```
 ### [PathPikcer](https://github.com/facebook/PathPicker) install
   Facebook PathPicker
   1. setup a app directory
   ```
-  mkdir -p ~/.app/bin
-  echo "# Setup fzf
-        # ---------
-        if [[ ! "$PATH" == */home/chen/.app/bin* ]]; then
-          export PATH="$PATH:/home/chen/.app/bin"
-        fi
-      " > .app.zsh
+    mkdir -p ~/.app/bin
+    echo "# Setup app
+          # ---------
+          if [[ ! "$PATH" == */home/chen/.app/bin* ]]; then
+            export PATH="$PATH:/home/chen/.app/bin"
+          fi
+        " > .app.zsh
   ```
   2. install via git
   ```
-  git clone https://github.com/facebook/PathPicker.git ~/.app/fpp
-  cd ~/.app/bin
-  ln -s ~/.app/bin/fpp fpp
+    git clone https://github.com/facebook/PathPicker.git ~/.app/fpp
+    cd ~/.app/bin
+    ln -s ~/.app/bin/fpp fpp
   ```
   3. add to zshrc
   ```
-  [ -f ~/.app.zsh ] && source ~/.app.zsh
+    [ -f ~/.app.zsh ] && source ~/.app.zsh
   ```
+ ### [ag](https://github.com/ggreer/the_silver_searcher)(The Silver Searcher) 
+   super fast grep
+   ```
+    sudo apt-get install silversearcher-ag
+   ```
   
-  
-  
+ ### [cheat.sh](https://github.com/chubin/cheat.sh)
+  ```
+    sudo apt install rlwrap
+    curl https://cht.sh/:cht.sh > ~/.app/bin/cht.sh
+    chmod +x ~/.app/bin/cht.sh
+  ```
   
   ## refer to
   * [awesome-cli-apps](https://github.com/agarrharr/awesome-cli-apps)
