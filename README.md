@@ -43,19 +43,16 @@
     sudo apt-get update
     sudo apt-get install fasd
   ```
-
-### [fd](https://github.com/sharkdp/fd) install
-  A simple, fast and user-friendly alternative to 'find'
-  Download the latest .deb package from the [release page](https://github.com/sharkdp/fd/releases) and install it via
-  ```
-    sudo dpkg -i fd_7.0.0_amd64.deb
-  ```
 ### [fzf](https://github.com/junegunn/fzf) install
   fuzzy finder , awesome tool !
-  install via git
+  1. install via git
   ```
     git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
     ~/.fzf/install
+  ```
+  2. fzf config
+  ```
+    export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --preview '(highlight -O ansi {} || cat {}) 2> /dev/null | head -500'"
   ```
 ### [PathPikcer](https://github.com/facebook/PathPicker) install
   Facebook PathPicker
