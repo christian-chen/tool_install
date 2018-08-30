@@ -88,6 +88,50 @@
     curl https://cht.sh/:cht.sh > ~/.app/bin/cht.sh
     chmod +x ~/.app/bin/cht.sh
   ```
+ 
+ ### vim with lua support
+  install on Ubuntu 18.04.1 LTS
+  1. install libary
+  ```
+    sudo apt-get install libncurses5-dev libgnome2-dev libgnomeui-dev \
+      libgtk2.0-dev libatk1.0-dev libbonoboui2-dev \
+      libcairo2-dev libx11-dev libxpm-dev libxt-dev python-dev \
+      python3-dev ruby-dev lua5.1-dev libperl-dev
+  ```
+  2. install lua5.1
+  ```
+    wget http://www.lua.org/ftp/lua-5.1.5.tar.gz
+    tar -xvf lua-5.1.5.tar.gz
+    cd lua-5.1.5
+    make
+    make install
+  
+  ```
+  3. remove old vim
+  ```
+    dpkg -l | grep vim
+    sudo apt-get remove vim vim-common vim-runtime vim-tiny
+  ```
+  4. install vim via source
+  ```
+    git clone https://github.com/vim/vim.git
+    cd vim
+    ./configure --with-features=huge \
+                --enable-multibyte \
+                --enable-rubyinterp=yes \
+                --enable-pythoninterp=yes \
+                --with-python-config-dir=/usr/lib/python2.7/config \
+                --enable-python3interp=yes \
+                --with-python3-config-dir=/usr/lib/python3.6/config \
+                --enable-perlinterp=yes \
+                --enable-luainterp=yes \
+                --enable-gui=gtk2 --enable-cscope --prefix=/usr
+    make VIMRUNTIMEDIR=/usr/share/vim/vim81
+    sudo make install
+    
+    #to check vim version
+    vim --version | grep -E "lua|python"
+  ```
   
   ## refer to
   * [awesome-cli-apps](https://github.com/agarrharr/awesome-cli-apps)
