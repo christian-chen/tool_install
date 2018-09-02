@@ -109,8 +109,12 @@
   ```
   3. remove old vim
   ```
-    dpkg -l | grep vim
-    sudo apt-get remove vim vim-common vim-runtime vim-tiny
+    sudo apt-get remove -y vim vim-runtime gvim
+    sudo apt-get remove -y vim-tiny vim-common vim-gui-common vim-nox
+    sudo rm -rf /usr/bin/vim*
+    sudo rm -rf /usr/local/bin/vim*
+    sudo rm -rf /usr/share/vim/vim*
+    sudo rm -rf /usr/local/share/vim/vim*
   ```
   4. install vim via source
   ```
